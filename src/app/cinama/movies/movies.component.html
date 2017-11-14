@@ -1,0 +1,13 @@
+<div class="movie-card" *ngFor="let movie of movies">
+    <h5>{{movie.title}}</h5>
+    <img [src]="movie.image">
+    <div class="movie-card-content">
+        <p>Rating: {{movie.rating}}</p>
+        <p>Release: {{movie.releaseYear}}</p>
+        <ul>
+            <li *ngFor="let genre of movie.genre">
+                {{genre}}
+            </li>
+        </ul>
+    </div>
+</div>
