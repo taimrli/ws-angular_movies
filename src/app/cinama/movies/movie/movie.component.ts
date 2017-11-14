@@ -1,4 +1,4 @@
-import {Component, Input} from "@angular/core";
+import {Component, EventEmitter, Input, Output} from "@angular/core";
 import {Movie} from "../movie.model";
 
 @Component({
@@ -8,4 +8,7 @@ import {Movie} from "../movie.model";
 export class MovieComponent {
   @Input()
   movie: Movie;
+
+  @Output()
+  deleteMovie: EventEmitter<Movie> = new EventEmitter();
 }

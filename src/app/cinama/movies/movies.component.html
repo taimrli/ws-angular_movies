@@ -1,1 +1,4 @@
-<movie *ngFor="let movie of movies" [movie]="movie"></movie>
+<movie *ngFor="let movie of movies"
+       [movie]="movie"
+       (deleteMovie)="onDeleteMovie($event)">
+</movie>
