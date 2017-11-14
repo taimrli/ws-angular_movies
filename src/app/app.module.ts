@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {CinemaComponent} from "./cinama/cinema.component";
 import {MoviesComponent} from "./cinama/movies/movies.component";
 import {MovieComponent} from "./cinama/movies/movie/movie.component";
+import {MovieService} from "./cinama/movies/movie.service";
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import {MovieComponent} from "./cinama/movies/movie/movie.component";
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
