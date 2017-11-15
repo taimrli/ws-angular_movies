@@ -14,6 +14,7 @@ import {VisitorsComponent} from "./cinama/visitors/visitors.component";
 import {VisitorService} from "./cinama/visitors/visitor.service";
 import {VisitorComponent} from "./cinama/visitors/visitor/visitor.component";
 import {FormsModule} from "@angular/forms";
+import {CountryService} from "./countries/country.service";
 
 const routeConfig : Routes = [
   {path: 'home', component: HomeComponent},
@@ -29,7 +30,7 @@ const routeConfig : Routes = [
   imports: [
     BrowserModule, HttpClientModule, RouterModule.forRoot(routeConfig), FormsModule
   ],
-  providers: [MovieService, VisitorService],
+  providers: [MovieService, VisitorService, CountryService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -26,6 +26,10 @@
     </table>
   </div>
   <div class="col-4">
-    <visitor [visitor]="selectedVisitor" (c)="onVisitorChanged($event)" (visitorDeleted)="onVisitorDeleted($event)"></visitor>
+    <visitor [visitor]="selectedVisitor"
+             [countries]="countries"
+             (visitorChanged)="onVisitorChanged($event)"
+             (visitorDeleted)="onVisitorDeleted($event)">
+    </visitor>
   </div>
 </div>

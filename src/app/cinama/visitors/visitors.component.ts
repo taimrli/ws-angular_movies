@@ -1,6 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import {VisitorService} from "./visitor.service";
 import {Visitor} from "./visitor.model";
+import {Country} from "../../countries/country.model";
+import {CountryService} from "../../countries/country.service";
 
 @Component({
   selector: 'visitors',
@@ -11,12 +13,17 @@ export class VisitorsComponent implements OnInit {
   visitors: Visitor[];
   selectedVisitor: Visitor;
 
-  constructor(private visitorService: VisitorService) {
+  countries: Country[];
+
+  constructor(private visitorService: VisitorService, private countryService: CountryService) {
   }
 
   ngOnInit(): void {
     this.visitorService.getAllVisitors()
       .subscribe(visitors => this.visitors = visitors);
+
+    this.countryService.getAllCountries()
+      .subscribe(countries => this.countries = countries);
   }
 
   selectVisitor(visitor: Visitor) {
