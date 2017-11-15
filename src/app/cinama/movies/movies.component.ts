@@ -14,7 +14,7 @@ export class MoviesComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.movies = this.movieService.getAllMovies();
+    this.movieService.getAllMovies().subscribe(allMovies => this.movies = allMovies);
   }
 
   onDeleteMovie(movieToDelete: Movie) {
