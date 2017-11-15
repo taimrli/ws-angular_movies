@@ -12,6 +12,8 @@ import {HomeComponent} from "./cinama/home/home.component";
 import {RouterModule, Routes} from "@angular/router";
 import {VisitorsComponent} from "./cinama/visitors/visitors.component";
 import {VisitorService} from "./cinama/visitors/visitor.service";
+import {VisitorComponent} from "./cinama/visitors/visitor/visitor.component";
+import {FormsModule} from "@angular/forms";
 
 const routeConfig : Routes = [
   {path: 'home', component: HomeComponent},
@@ -22,10 +24,10 @@ const routeConfig : Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, CinemaComponent, MoviesComponent, MovieComponent, HomeComponent, VisitorsComponent
+    AppComponent, CinemaComponent, MoviesComponent, MovieComponent, HomeComponent, VisitorsComponent, VisitorComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, RouterModule.forRoot(routeConfig)
+    BrowserModule, HttpClientModule, RouterModule.forRoot(routeConfig), FormsModule
   ],
   providers: [MovieService, VisitorService],
   bootstrap: [AppComponent]
