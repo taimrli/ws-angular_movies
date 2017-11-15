@@ -1,2 +1,11 @@
 <h1>Cinema</h1>
-<router-outlet></router-outlet>
+<nav>
+  <ul>
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/movies" routerLinkActive="active">Movies</a></li>
+    <li><a routerLink="/visitors" routerLinkActive="active">Visitors</a></li>
+  </ul>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
