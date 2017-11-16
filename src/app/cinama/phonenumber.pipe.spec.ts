@@ -5,7 +5,7 @@ describe('Phone Number Pipe', () => {
   let unformattedNumber = '0564410808';
 
   it('should correctly format a local phone number', () => {
-    let actual = pipe.transform(unformattedNumber, undefined);
+    let actual = pipe.transform(unformattedNumber);
 
     expect(actual).toEqual('056 441 08 08');
   });
@@ -17,7 +17,7 @@ describe('Phone Number Pipe', () => {
   });
 
   it('should return the original phone number if it does not match the required format', () => {
-    let actual = pipe.transform('abc', undefined);
+    let actual = pipe.transform('abc');
 
     expect(actual).toEqual('abc');
   })
