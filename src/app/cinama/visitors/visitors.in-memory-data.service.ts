@@ -1,4 +1,4 @@
-import {InMemoryDbService} from "angular-in-memory-web-api";
+import {InMemoryDbService} from 'angular-in-memory-web-api';
 import {Visitor} from "./visitor.model";
 
 export class VisitorsInMemoryDataService implements InMemoryDbService {
@@ -8,6 +8,6 @@ export class VisitorsInMemoryDataService implements InMemoryDbService {
       {id: 2, firstName: 'Petra', lastName: 'Petersen'}
     ];
 
-    return {visitors}
+    return {visitors};
   }
 }
