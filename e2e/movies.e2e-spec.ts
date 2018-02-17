@@ -11,6 +11,11 @@ describe('movies page', () => {
     page.navigateTo();
   });
 
+  it('can find a movie', () => {
+    page.navigateTo();
+    // find e.g. 'despicable me'
+  });
+
   it('can remove a movie', () => {
     page.navigateTo();
   });
